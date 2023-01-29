@@ -1,0 +1,261 @@
+a{
+color:inherit;    
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+text-decoration:none;
+font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+max-width:1100px;
+margin:0 auto;
+padding:0px 20px;
+}
+.header{
+background-image:url(img/banner.jpg);
+padding:200px 0px;
+color:white;		
+position:relative;
+z-index:1;
+}
+h1{
+font-size:60px;	
+margin-bottom:20px;
+}
+.line{
+border:3px solid white;
+border-radius:10px;
+margin-bottom:20px;
+transition:3s;
+width:100%;
+}
+.main-btn{
+color:white;
+font-size:16px;
+width:220px;
+height:70px;
+border:3px solid white;
+background-color:transparent;	
+}
+.header p{
+display:inline-block;
+width:650px;
+font-size:16px;	
+text-transform:uppercase;
+}
+.cover{
+position:absolute;
+width:100%;
+height:100%;
+background-color:rgba(0, 0, 0, 0.6);
+top:0;
+left:0;
+z-index:-1;	
+}
+.about-me{
+background-color:#2a2f4a;
+padding:100px 0px;	
+}
+.footer{
+background-color:#242943;
+padding:100px 0px;	
+}
+.gallery-list{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-rows:repeat(3, 450px);	
+}
+.gallery-list li:nth-child(1){
+background-image:url(img/pic01.jpg);
+}
+.gallery-list li:nth-child(2){
+background-image:url(img/pic02.jpg);
+grid-column:2/4;
+}
+.gallery-list li:nth-child(3){
+background-image:url(img/pic03.jpg);
+grid-column:1/3;
+}
+.gallery-list li:nth-child(4){
+background-image:url(img/pic04.jpg);
+}
+.gallery-list li:nth-child(5){
+background-image:url(img/pic05.jpg);
+}
+.gallery-list li:nth-child(6){
+background-image:url(img/pic06.jpg);
+grid-column:2/4;
+}
+.gallery-list li {
+background-repeat:no-repeat;
+background-size:cover;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:left;
+z-index:1;
+position:relative;
+}
+.gallery-list h3{
+font-size:50px;
+color:white;
+margin-bottom:10px;
+border-bottom:5px solid white;
+padding-bottom:10px;	
+}
+.gallery-list p{
+font-size:20px;
+color:white;	
+}
+.gallery-list li:nth-child(1) .cover{
+background-color:rgba(100, 200, 200, 0.6);
+}
+.gallery-list li:nth-child(2) .cover{
+background-color:rgba(200, 100, 200, 0.6);
+}
+.gallery-list li:nth-child(3) .cover{
+background-color:rgba(220, 100, 100, 0.6);
+}
+.gallery-list li:nth-child(4) .cover{
+background-color:rgba(200, 200, 100, 0.6);
+}
+.gallery-list li:nth-child(5) .cover{
+background-color:rgba(180, 150, 170, 0.6);
+}
+.gallery-list li:nth-child(6) .cover{
+background-color:rgba(100, 200, 100, 0.6);
+}
+.gallery-list li:hover .cover{
+background-color:rgba(0, 0, 0, 0.3);
+transition:1s;
+}
+h2{
+font-size:50px;
+color:white;
+text-align:center;
+margin-bottom:20px;
+}
+.about-me p{
+font-size:20px;
+color:white;
+margin-bottom:10px;
+margin-top:10px;
+}
+#name{
+grid-area:name;	
+}
+#email{
+grid-area:email;	
+}
+#message{
+grid-area:message;	
+}
+.footer-form button{
+grid-area:button;
+}
+label[for="name"]{
+grid-area:name-label;	
+}
+label[for="email"]{
+grid-area:email-label;
+}
+label[for="message"]{
+grid-area:message-label;
+}
+.footer-form{
+display:grid;
+grid-template-areas:   
+ "name-label email-label"
+ "name email"
+ "message-label message-label"
+ "message message"
+ "button .";
+ grid-template-rows:auto 50px auto 150px 50px;
+ gap:15px;
+}
+.footer-form label{
+color:white;
+font-size:20px;
+text-transform:uppercase;	
+}
+.footer-form input,.footer-form textarea{
+background-color:#2a2f4a;
+border:none;
+outline:none;
+font-size:20px;
+padding:10px;
+color:white;
+}
+.footer-form button{
+font-size:20px;
+border:none;	
+text-transform:uppercase;
+}
+.main-btn:hover{
+background-color:white;
+color:black;
+transition:1s;
+cursor:pointer;
+}
+.header:hover hr{
+width:45%;
+display:block;
+}
+.footer-form button:hover{
+transition:1s;
+color:white;
+background-color:black;    
+cursor:pointer;
+}
+@media(max-width:768px){
+.header button{
+margin-top:20px;    
+}    
+.gallery-list{
+grid-template-columns:none;
+grid-template-rows:repeat(6, 300px);    
+}
+.gallery-list li:nth-child(2){
+grid-column:1/2;
+}
+.gallery-list li:nth-child(3){
+grid-column:1/2;
+}
+.gallery-list li:nth-child(6){
+grid-column:1/2;
+}
+.footer-form{
+grid-template-rows:auto 50px auto 50px auto 100px 50px;
+grid-template-areas: 
+ "name-label"
+ "name"
+ "email-label"
+ "email"
+ "message-label"
+ "message"
+ "button"
+}
+h2{
+font-size:30px;    
+}
+h1{
+font-size:40px;    
+}
+.gallery-list h3{
+font-size:30px;
+}
+.header p{
+width:100%;    
+}
+}
+@media (max-width:425px){
+.header{
+padding:100px 0;    
+}
+.footer{
+padding:50px 0;    
+}    
+}
